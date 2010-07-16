@@ -10,7 +10,20 @@ body {
     margin:0;
     padding:10px;   
     font-size:1.2em; 
-    border-left:1px solid #666;    
+    border-left:1px solid #444;    
+}
+
+#login-error {
+    position:absolute;
+    top:50%;
+    right:400px;
+    width:260px;
+    margin:0;
+    padding:10px;
+    font-size:1.8em;
+    height:143px;
+    margin-top:-91px;
+    padding-top:32px;
 }
 
 #login {

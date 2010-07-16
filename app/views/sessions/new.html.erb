@@ -1,3 +1,8 @@
+<% if params[:unauthenticated] == "true" then -%>
+  <div id="login-error">
+    <p>It appears that you have tried to access a page that you do not have access to.</p>
+  </div>
+<% end -%>
 <div class="login-frame" id="login">
   <% form_for :user, :url => user_session_path do |f| -%>
     <%= f.label :email %>
@@ -8,7 +13,7 @@
     <br />
     <%= f.password_field :password, :class => 'text' %>
     <br />
-    <%= f.submit 'Log in' %>
+    <%= f.submit 'Sign in' %>
     <%= link_to 'Lost Password', new_user_password_path %>
     <%= link_to 'Register', new_user_registration_path %>
   <% end -%>
