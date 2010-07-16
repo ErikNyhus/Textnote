@@ -1,2 +1,12 @@
-<h1>Login#index</h1>
-<p>Find me in app/views/login/index.html.erb</p>
+<div id="navbar">
+
+</div>
+<div id="login-frame">
+  <% form_for :user, :url => user_session_path do |f| -%>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit 'Log in' %>  
+  <% end -%>
+</div>
