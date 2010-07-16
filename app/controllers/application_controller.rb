@@ -7,4 +7,9 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  # Rescue from wrong URL:
+  rescue_from ActionController::RoutingError do |exception|
+    redirect_to(root_path)
+  end 
 end
