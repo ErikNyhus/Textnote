@@ -1,8 +1,4 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :posts
-
-  map.devise_for :users
-
   
   map.root :controller => 'login'
   
@@ -14,6 +10,8 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'pages/index', :controller => 'pages'
   map.connect 'pages/blog', :controller => 'pages', :action => 'blog'
   map.connect 'pages/about', :controller => 'pages', :action => 'about'
+  
+  map.devise_for :users
   
   # The priority is based upon order of creation: first created -> highest priority.
 
