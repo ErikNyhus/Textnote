@@ -23,3 +23,5 @@
     
     border-left:1px solid #666;    
 }
+
+#login-frame a, #login-frame span {float:right;margin-right:10px;}

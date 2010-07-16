@@ -8,6 +8,8 @@
     <br />
     <%= f.password_field :password, :class => 'text' %>
     <br />
-    <%= f.submit 'Log in' %>  
+    <%= f.submit 'Log in' %>
+    <%= link_to 'Lost Password', new_user_password_path %>
+    <%= link_to 'Register', new_user_registration_path %>
   <% end -%>
 </div>
