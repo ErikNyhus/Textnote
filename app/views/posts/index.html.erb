@@ -1,1 +1,17 @@
-<h1>posts#index</h1>
+<div class="container">
+<div id="blog-container" class="span-16 border">
+<% for item in @posts -%>
+  <% if item.published? -%>
+  
+    <h2><%=h item.title %></h2>
+    
+    <p><%=h item.body[/.*/] %></p>
+    <code><%=h item.author %></code>
+    
+    <hr />
+  <% end -%>
+<% end -%>
+</div>
+<div class="span-8 last">
+</div>
+</div>
