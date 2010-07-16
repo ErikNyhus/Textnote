@@ -14,15 +14,18 @@ body {
 }
 
 #login {
-    height:160px;
-    margin-top:-100px;
+    height:143px;
+    margin-top:-91px;
 }
 
 #registration {
-    height:220px;
-    margin-top:-130px;
+    height:203px;
+    margin-top:-121px;
 }
 
-#password {}
+#password {
+    height:83px;
+    margin-top:-61px;
+}
 
 .login-frame a, .login-frame span {float:right;margin-right:10px;}
