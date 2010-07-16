@@ -2,17 +2,6 @@ body {
     background-image:url(/images/login-background.jpg);
 }
 
-#navbar {
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    width:auto;
-    height:32px;
-    margin:0;
-    padding:0;
-}
-
 #login-frame {
     position:absolute;
     top:50%;
