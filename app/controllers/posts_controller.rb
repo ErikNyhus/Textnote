@@ -1,28 +1,22 @@
 class PostsController < ApplicationController
-  # GET /posts
-  def index
-    @posts = Post.all(:order => "created_at DESC", :limit => 3)
-    @lastpage = Post.count.quo(3).ceil
-    @pagenum = (1..@lastpage)
-    @nextURL = '/blog/2'
+  def nopage
+    redirect_to '/blog/1'
   end
   
-  def blogpage
-    @nextURL = '/blog/' + (params[:page].to_i+1).to_s
-    @previousURL = '/blog/' + (params[:page].to_i-1).to_s
-    @offset = (params[:page].to_i-1)*3
-    @posts = Post.all(:order => "created_at DESC", :offset => @offset, :limit => 3)
-    @lastpage = Post.count.quo(3).ceil
-    @pagenum = (1..@lastpage)
-    @testvalue = 0
-    for item in @pagenum do
-      if params[:page].to_i == item then
-        render :index
-        @testvalue = 1
+  def index
+    @page = params[:page].to_i
+    @last_page = Post.count.quo(3).ceil
+    @posts = Post.all(:order => "created_at DESC", :offset => (@page-1)*3, :limit => 3)
+    @valid_page = false
+    for item in (1..@last_page) do
+      if @page == item then
+        @valid_page = true
       end
     end
-    if @testvalue == 0
-      redirect_to '/blog'
+    if @valid_page == true then
+      return false
+    else
+      redirect_to '/blog/1'
     end
   end
 
