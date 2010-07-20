@@ -4,16 +4,16 @@ ActionController::Routing::Routes.draw do |map|
   
   map.connect 'login', :controller => 'login'
   map.connect 'login/index', :controller => 'login'
-  map.connect 'login/about', :controller => 'login', :action => 'about'
+  map.login_about 'login/about', :controller => 'login', :action => 'about'
   
-  map.connect 'pages/index', :controller => 'pages'
-  map.connect 'pages/about', :controller => 'pages', :action => 'about'
+  map.pages 'pages/index', :controller => 'pages'
+  map.pages_about 'pages/about', :controller => 'pages', :action => 'about'
   
   map.devise_for :users
   
-  map.connect 'blog', :controller => 'posts', :action => 'nopage'
-  map.connect 'blog/:page', :controller => 'posts', :action => 'index'
-  map.connect 'blog/post/:id', :controller => 'posts', :action => 'show'
+  map.blog 'blog', :controller => 'posts', :action => 'nopage'
+  map.blog_page 'blog/:page', :controller => 'posts', :action => 'index'
+  map.blog_post 'blog/post/:id', :controller => 'posts', :action => 'show'
   
   # The priority is based upon order of creation: first created -> highest priority.
 
