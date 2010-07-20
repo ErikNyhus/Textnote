@@ -13,12 +13,12 @@
 <% end -%>
 <span class="large">
 <% if @page == 1 then -%>
-  <%= link_to 'Next', '/blog/' + (@page+1).to_s %>
+  <%= link_to 'Next', blog_page_path(:page => @page+1) %>
 <% elsif @page == @last_page then -%>
-  <%= link_to 'Previous', '/blog/' + (@page-1).to_s %>
+  <%= link_to 'Previous', blog_page_path(:page => @page-1) %>
 <% else -%>
-  <%= link_to 'Previous', '/blog/' + (@page-1).to_s %>
-  <%= link_to 'Next', '/blog/' + (@page+1).to_s %>
+  <%= link_to 'Previous', blog_page_path(:page => @page-1) %>
+  <%= link_to 'Next', blog_page_path(:page => @page+1) %>
 <% end -%>
 </span>
 </div>
