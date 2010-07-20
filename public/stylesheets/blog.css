@@ -1,6 +1,9 @@
-body {background-image:url(/images/login-background.jpg)
+body {background-image:url(/images/login-background.jpg);}
 
-#blog-frame {
+#blog-container {
     border:1px solid #000;
-    background-color:#323232;
+    background-color:#FFF;
+    padding:16px;
+    margin-left:320px;
+    margin-top:32px;
 }
