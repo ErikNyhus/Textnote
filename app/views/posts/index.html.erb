@@ -12,5 +12,10 @@
     <hr />
   <% end -%>
 <% end -%>
+<span class="large">
+<% for item in @pagenum -%>
+  <%= link_to item, '/blog/' + item.to_s %>
+<% end -%>
+</span>
 </div>
 </div>

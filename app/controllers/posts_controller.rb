@@ -2,11 +2,15 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all(:order => "created_at DESC", :limit => 3)
+    @lastpage = Post.count.quo(3).ceil
+    @pagenum = (1..@lastpage)
   end
   
   def blogpage
     @offset = (params[:page].to_i-1)*3
     @posts = Post.all(:order => "created_at DESC", :offset => @offset, :limit => 3)
+    @lastpage = Post.count.quo(3).ceil
+    @pagenum = (1..@lastpage)
     render :index
   end
 
