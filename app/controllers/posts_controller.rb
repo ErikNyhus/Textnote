@@ -3,6 +3,12 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all(:order => "created_at DESC", :limit => 3)
   end
+  
+  def blogpage
+    @offset = (params[:page].to_i-1)*3
+    @posts = Post.all(:order => "created_at DESC", :offset => @offset, :limit => 3)
+    render :index
+  end
 
   # GET /posts/1
   def show

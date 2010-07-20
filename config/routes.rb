@@ -14,6 +14,7 @@ ActionController::Routing::Routes.draw do |map|
   map.devise_for :users
   
   map.connect 'blog', :controller => 'posts', :action => 'index'
+  map.connect 'blog/:page', :controller => 'posts', :action => 'blogpage'
   
   # The priority is based upon order of creation: first created -> highest priority.
 
