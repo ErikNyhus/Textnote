@@ -1,18 +1,8 @@
-<p>
-  <b>Title:</b>
-  <%=h @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%=h @post.body %>
-</p>
-
-<p>
-  <b>Published:</b>
-  <%=h @post.published %>
-</p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="container">
+<div id="blog-container" class="span-16 last">
+    <h2><%=h @post.title %></h2>
+    
+    <p><%=h @post.body %></p>
+    <code><%=h @post.author %></code>
+</div>
+</div>

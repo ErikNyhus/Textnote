@@ -15,6 +15,7 @@ ActionController::Routing::Routes.draw do |map|
   
   map.connect 'blog', :controller => 'posts', :action => 'index'
   map.connect 'blog/:page', :controller => 'posts', :action => 'blogpage'
+  map.connect 'blog/post/:id', :controller => 'posts', :action => 'show'
   
   # The priority is based upon order of creation: first created -> highest priority.
 
