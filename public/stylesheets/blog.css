@@ -1,5 +1,8 @@
 body {background-image:url(/images/login-background.jpg);}
 
+.right {float:right;}
+.left {float:left;}
+
 #blog-container {
     border:1px solid #000;
     background-color:#FFF;
