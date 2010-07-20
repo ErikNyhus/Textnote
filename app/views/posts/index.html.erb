@@ -12,9 +12,11 @@
   <% end -%>
 <% end -%>
 <span class="large">
+<%= link_to 'Previous', @previousURL %>
 <% for item in @pagenum -%>
   <%= link_to item, '/blog/' + item.to_s %>
 <% end -%>
+<%= link_to 'Next', @nextURL %>
 </span>
 </div>
 </div>
