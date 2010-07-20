@@ -4,6 +4,9 @@ class PostsController < ApplicationController
   end
   
   def index
+    
+    @title = "Blog"
+    
     @page = params[:page].to_i
     @last_page = Post.count.quo(3).ceil
     @posts = Post.all(:order => "created_at DESC", :offset => (@page-1)*3, :limit => 3)
