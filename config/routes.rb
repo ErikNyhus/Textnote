@@ -4,11 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.connect 'login', :controller => 'login'
   map.connect 'login/index', :controller => 'login'
-  map.connect 'login/blog', :controller => 'login', :action => 'blog'
   map.connect 'login/about', :controller => 'login', :action => 'about'
   
   map.connect 'pages/index', :controller => 'pages'
-  map.connect 'pages/blog', :controller => 'pages', :action => 'blog'
   map.connect 'pages/about', :controller => 'pages', :action => 'about'
   
   map.devise_for :users
