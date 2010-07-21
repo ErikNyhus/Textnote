@@ -5,10 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'login', :controller => 'login'
   map.connect 'login/index', :controller => 'login'
   map.login_about 'login/about', :controller => 'login', :action => 'about'
-  
-  map.pages 'pages/index', :controller => 'pages'
-  map.pages_about 'pages/about', :controller => 'pages', :action => 'about'
-  
+
   map.devise_for :users
   
   map.blog 'blog', :controller => 'posts', :action => 'nopage'
